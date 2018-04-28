@@ -40,9 +40,6 @@ class ChatReader(irc.bot.SingleServerIRCBot):
         c.join(self.channel)
 
     def on_pubmsg(self, c, e):
-        # Check for command
-        if e.arguments[0][:1] == '!':
-            
         rospy.loginfo(e.arguments[0])
         self.pub.publish(e.arguments[0])
 
