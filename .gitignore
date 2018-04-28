@@ -99,3 +99,11 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# ROS
+cmake_install.cmake
+build/
+bin/
+lib/
+msg_gen/
+srv_gen/
