@@ -40,8 +40,8 @@ class ChatReader(irc.bot.SingleServerIRCBot):
         c.join(self.channel)
 
     def on_pubmsg(self, c, e):
-        rospy.loginfo(e.arguments[0])
-        self.pub.publish(e.arguments[0])
+        rospy.loginfo(str(e.arguments))
+        self.pub.publish(str(e.arguments))
 
 if __name__ == '__main__':
 
